@@ -1,0 +1,9 @@
+{
+  "name": "gas-react-ts-root",
+  "scripts": {
+    "build:frontend": "cd frontend && npm run build",
+    "copy:server": "cp Code.ts dist/Code.gs && cp appsscript.json dist/appsscript.json",
+    "deploy": "npm run build:frontend && npm run copy:server && clasp push"
+  }
+}
+

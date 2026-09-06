@@ -7,6 +7,5 @@ function doGet() {
 
 // Backend API function callable from React
 function getSheetData() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Appointments");
-  return sheet.getRange("A1:F").getValues();
+  return SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Appointments").getRange("A1:F").getValues();
 }

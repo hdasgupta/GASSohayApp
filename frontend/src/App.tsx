@@ -7,10 +7,11 @@ export default function App() {
     if (typeof google !== 'undefined' && google.script) {
       google.script.run
         .withSuccessHandler((result: any[][]) => {
+          alert(result)
           setData(result);
         })
         .withFailureHandler((err: Error) => {
-          console.error(err);
+          alert(err.message);
         })
         .getSheetData();
     }
